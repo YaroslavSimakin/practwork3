@@ -3,6 +3,7 @@ description: Сбор информации о дефектах
 title: "[Ошибка]: "
 labels: ["bug"]
 body:
+
 - type: textarea
     id: summary
     attributes:
