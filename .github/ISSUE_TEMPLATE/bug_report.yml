@@ -1,9 +1,9 @@
-name: Отчет о дефектах
-description: Сбор информации о дефектах
-title: "[Ошибка]: "
-labels: ["bug"]
+  name: Отчет о дефектах
+  description: Сбор информации о дефектах
+  title: "[Ошибка]: "
+  labels: ["bug"]
 
-body:
+  body:
 
   - type: textarea
     id: summary
