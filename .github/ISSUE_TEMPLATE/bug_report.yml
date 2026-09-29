@@ -5,7 +5,7 @@ labels: ["bug"]
 body:
 
 - type: textarea
-    id: summary
+id: summary
     attributes:
       label: Заголовок
       description: Кратко сформулируйте суть дефекта
