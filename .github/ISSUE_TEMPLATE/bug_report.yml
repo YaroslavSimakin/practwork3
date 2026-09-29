@@ -14,7 +14,7 @@
     validations:
       required: true #поле обязательно для заполнения
 
-- type: textarea
+  - type: textarea
     id: description
     attributes:
       label: Описание
@@ -23,7 +23,7 @@
     validations:
       required: true #поле обязательно для заполнения
 
-- type: textarea
+  - type: textarea
     id: preconditions
     attributes:
       label: Предусловия
@@ -32,7 +32,7 @@
     validations:
       required: false
 
-- type: textarea
+  - type: textarea
     id: steps
     attributes:
       label: Шаги воспроизведения
@@ -43,7 +43,7 @@
     validations:
       required: true #поле обязательно для заполнения
 
-- type: textarea
+  - type: textarea
     id: expected-result
     attributes:
       label: Ожидаемый результат
@@ -52,7 +52,7 @@
     validations:
       required: true #поле обязательно для заполнения
 
-- type: textarea
+  - type: textarea
     id: actual-result
     attributes:
       label: Фактический результат
@@ -61,7 +61,7 @@
     validations:
       required: true #поле обязательно для заполнения 
 
-- type: textarea
+  - type: textarea
     id: attachments
     attributes:
       label: Скриншоты / Доп. материалы
@@ -70,7 +70,7 @@
     validations:
       required: false
 
-- type: dropdown
+  - type: dropdown
     id: priority
     attributes:
       label: Приоритет
@@ -82,7 +82,7 @@
     validations:
       required: true
 
-- type: dropdown
+  - type: dropdown
     id: severity
     attributes:
       label: Серьезность
@@ -95,14 +95,14 @@
     validations:
       required: true
 
-- type: markdown
+  - type: markdown
     attributes:
       value: |
         ---
         ### Подтверждение перед отправкой
         Пожалуйста, убедитесь, что вы проверили существующие баги
 
-- type: checkboxes
+  - type: checkboxes
     id: check-duplicates
     attributes:
       label: Проверка дупликатов
