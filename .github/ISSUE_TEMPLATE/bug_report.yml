@@ -2,6 +2,7 @@ name: Отчет о дефектах
 description: Сбор информации о дефектах
 title: "[Ошибка]: "
 labels: ["bug"]
+
 body:
 
 - type: textarea
