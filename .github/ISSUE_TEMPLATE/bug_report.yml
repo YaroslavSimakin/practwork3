@@ -1,4 +1,112 @@
-name: название шаблона
-description: описание шаблона
+name: Отчет о дефектах
+description: Сбор информации о дефектах
 title: "[Ошибка]: "
 labels: ["bug"]
+body:
+- type: textarea
+    id: summary
+    attributes:
+      label: Заголовок
+      description: Кратко сформулируйте суть дефекта
+      placeholder: Например, ошибка 404 при переходе на новую страницу
+    validations:
+      required: true #поле обязательно для заполнения
+
+- type: textarea
+    id: description
+    attributes:
+      label: Описание
+      description: Подробное описание проблемы
+      placeholder: Опишите дефект более детально
+    validations:
+      required: true #поле обязательно для заполнения
+
+- type: textarea
+    id: preconditions
+    attributes:
+      label: Предусловия
+      description: Что должно быть настроено перед началом теста
+      placeholder: Например, пользователь авторизован
+    validations:
+      required: false
+
+- type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Пошаговый сценарий для повторения бага
+      placeholder: |
+      1. Открыть главную страницу
+      2. Нажать кнопку...
+    validations:
+      required: true #поле обязательно для заполнения
+
+- type: textarea
+    id: expected-result
+    attributes:
+      label: Ожидаемый результат
+      description: Ожидаемый р6езультат работы системы
+      placeholder: Например, открывается новая страница
+    validations:
+      required: true #поле обязательно для заполнения
+
+- type: textarea
+    id: actual-result
+    attributes:
+      label: Фактический результат
+      description: Что произошло на самом деле
+      placeholder: Например, страница зависла
+    validations:
+      required: true #поле обязательно для заполнения 
+
+- type: textarea
+    id: attachments
+    attributes:
+      label: Скриншоты / Доп. материалы
+      description: Прикрепите скриншоты или логи, если они есть
+      placeholder: Перетащите файлы сюда
+    validations:
+      required: false
+
+- type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      description: Выберите приоритет исправления дефекта
+      options:
+       - Низкий
+       - Средний
+       - Высокий
+    validations:
+      required: true
+
+- type: dropdown
+    id: severity
+    attributes:
+      label: Серьезность
+      description: Выберите степень влияния бага на систему
+      options:
+       - Незначительная
+       - Значительная
+       - Критическая
+       - Блокирующая
+    validations:
+      required: true
+
+- type: markdown
+    attributes:
+      value: |
+        ---
+        ### Подтверждение перед отправкой
+        Пожалуйста, убедитесь, что вы проверили существующие баги
+
+- type: checkboxes
+    id: check-duplicates
+    attributes:
+      label: Проверка дупликатов
+      description: Ознакомление с правилами репозитория
+      options:
+      - label: Я ознакомился с уже существующими отчетами о дефектах
+        required: true #флажок обязателен или нет
+    validations:
+      required: true
